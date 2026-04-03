@@ -26,3 +26,17 @@ body{
     border: 1px solid #ccc;
     border-radius: 5px;
 }
+#submit{
+    padding: 1rem 2rem;
+    margin-top: 20px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+#submit:disabled
+{
+    background-color: #ccc;
+    cursor: not-allowed;
+}
