@@ -19,6 +19,8 @@ inputContainers.forEach((input, index) => {
                 e.preventDefault();
                 inputContainers[index - 1].value = "";
             }
+            if (index === 1)
+                submitBtn.setAttribute("disabled", "true");
         }
     })
 })
