@@ -1,0 +1,25 @@
+body{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+
+.cell{
+    padding: 2rem;
+    border: 1px solid #9cae53;
+}
+.black{
+    background-color: #222;
+    color: whitesmoke;
+}
+.white{
+    background-color: whitesmoke;
+    color: darkslategray;
+}
+.table{
+    border-collapse: collapse;
+}
+.highlight{
+    background-color: #e3f4a2;
+}
