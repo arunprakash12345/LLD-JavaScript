@@ -1,0 +1,37 @@
+input{
+    padding: 1rem;
+    border: 1px solid lightblue;
+}
+.timer-container{
+    background-color: #f5f5f5;
+    padding: 2rem;
+    border-radius: 10px;
+    display: flex;
+    gap: 2rem;
+    flex-direction: column;
+    align-items: center;
+    /* height: 50vh; */
+    margin: 5rem;
+    width: 50%;
+    margin-left: 22rem;
+    
+}
+button{
+    padding: 1rem;
+    background-color: blue;
+    color: white;
+    border: none;
+    border-radius:4px ;
+    cursor: pointer;
+}
+#continue{
+    display: none;
+}
+.button-container{
+    display: flex;
+    flex-wrap: nowrap;
+    gap: .5rem;
+}
+button:disabled{
+    opacity: 60%;
+}
