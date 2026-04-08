@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Throttle</title>
+  </head>
+  <body>
+    <input type="text" placeholder="search" id="search" />
+
+    <script>
+      const inputBox = document.getElementById("search");
+      const throttle = (fn, time) => {
+        let timerOut = true;
+        return function (...args) {
+          if (!timerOut) return;
+
+          timerOut = false;
+          fn(...args);
+          setTimeout(() => {
+            timerOut = true;
+          }, time);
+        };
+      };
+      const throttleSearch = throttle(handleSearch, 500);
+      function handleSearch(e) {
+        console.log(e.target.value);
+      }
+      inputBox.addEventListener("input", throttleSearch);
+    </script>
+  </body>
+</html>

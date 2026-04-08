@@ -1,0 +1,9 @@
+.tab-container{
+    padding: 1rem;
+    background-color: #fafafc;
+}
+
+.tabs{
+    display: flex;
+    gap: 1rem;
+}
