@@ -1,0 +1,45 @@
+.card {
+  background-color: rgb(222, 222, 222);
+  border-radius: 0.4rem;
+  margin-top: 0.3rem;
+  padding: 0.6rem;
+  height: auto;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.text {
+  font-size: 1.2rem;
+  font-weight: bolder;
+  color: black;
+}
+.reply {
+  color: rgb(84, 84, 233);
+  font-weight: bolder;
+  cursor: pointer;
+}
+
+.comment-reply-container {
+  margin-left: 4rem;
+  margin-top: 0.4rem;
+}
+
+.input {
+  border-radius: 0.6rem;
+  height: 1.5rem;
+}
+
+.btn {
+  color: whitesmoke;
+  background-color: rgb(84, 84, 233);
+  border-radius: 0.6rem;
+  padding: 0.3rem;
+  border: 0;
+  margin-left: 0.125rem;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.comment:not(:first-child) {
+  margin-left: 4rem;
+  margin-top: 0.5rem;
+}
