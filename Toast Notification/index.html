@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Toast Notification</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div class="toast-container">
+      <select name="status" id="status">
+        <option value="success">Success</option>
+        <option value="normal">Normal</option>
+        <option value="error">Error</option>
+        <option value="warning">Warning</option>
+        <option value="info">Info</option>
+      </select>
+      <input
+        type="text"
+        id="message"
+        value="Hey there hope you are doing good."
+        placeholder="Enter Message"
+      />
+      <input type="number" id="duration" placeholder="Enter duration" />
+      <button class="btn">Show Toast</button>
+    </div>
+
+    <div class="toast"></div>
+    <script src="./main.js"></script>
+  </body>
+</html>
