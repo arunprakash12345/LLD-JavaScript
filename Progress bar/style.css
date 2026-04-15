@@ -1,0 +1,37 @@
+.progressBarContainer {
+  width: 800px;
+  background-color: #fafafa;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+}
+.progress-bar {
+  height: 16px;
+  background-color: #dcdcdc;
+  margin: 1rem;
+  width: 100%;
+}
+.progress-fill {
+  height: 16px;
+  background-color: darkcyan;
+  width: 1%;
+}
+
+.button-layout {
+  display: flex;
+  gap: 10px;
+}
+button {
+  padding: 0.75rem;
+  background-color: darkcyan;
+  color: white;
+  border: none;
+  width: 75px;
+  cursor: pointer;
+}
+button:disabled {
+  background-color: lightblue;
+}
