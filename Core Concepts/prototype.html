@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Prototype</title>
+  </head>
+  <body>
+    <h1>Prototype</h1>
+
+    <script>
+      // every function, object, array created prototype is attached to it.
+      const obj = {
+        name: "Arun Prakash",
+        printName: function () {
+          console.log(this.name);
+        },
+      };
+      // console.log(obj); prototype of obj
+      // console.log(obj.hasOwnProperty("name")); // true
+      // so whenever we give obj.something it search in the object itself if it didn't found it
+      // goes to the parent which is prototype object
+
+      const arr = [1, 2, 3, 4, 5];
+      // console.log(arr); //prototype of array
+
+      // Prototype belongs to object definition itself
+      // __proto__ helps you to access the same prototype object using instance of an object
+      function Car(model, year) {
+        this.model = model;
+        this.year = year;
+      }
+      Car.prototype.displayInfo = function (model, year) {
+        console.log(`This ${this.model} made in ${this.year}`);
+      };
+
+      const car1 = new Car("Honda", 2019);
+      const car2 = new Car("Toyoto", 2021);
+
+      //   console.log(car1.displayInfo());
+      //   console.log(car2);
+
+      //console.log(Car.prototype); // Gives the prototype object as this is constructor function
+      // console.log(car1.prototype); //  Gives undefied as this is instance.
+
+      //console.log(Car.prototype); // give undefines as this is prototype instance.
+      //console.log(Car.prototype.__proto__); // gives an protoyotype obj as we are using proto
+
+      // console.log([1, 2, 3].prototype); // undefiend
+      //  console.log(Array.prototype); //prototype object
+
+      //console.log([1, 2, 3].__proto__); //prototype object
+
+      // but this is not at all recommended.
+      //   Car.prototype.__proto__.genericDisplayInfo = function (model, year) {
+      //     console.log(`This ${this.model} made in ${this.year}`);
+      //   };
+      //   console.log(car1);
+      // -------------------------------------______----------_______-------_______----
+      // Interview questions
+      // 1. __proto__ to null
+      //   const ob = { name: "Arun" };
+
+      //   ob.__proto__ = null;
+      //   console.log(ob);
+      // Prototype of the ob is removed you can't access any inbuilt function
+      // so don't modify or nullify the prototype objects
+
+      //   function Animal() {}
+      //   Animal.prototype.speak = function () {
+      //     console.log("Speak!");
+      //   };
+
+      //   function Dog() {}
+
+      //   Dog.prototype = Object.create(Animal.prototype);
+      //   Dog.prototype.constructor = Dog;
+      //   Dog.prototype.speak = function () {
+      //     console.log("Bow Bow!");
+      //   };
+
+      //   const dog1 = new Dog();
+      //   console.log(dog1);
+
+      //   Object.prototype.method --> Never do this
+
+      // Circular prototype chain
+
+      //   function A() {}
+      //   function B() {}
+
+      //   let a = new A();
+      //   let b = new B();
+
+      // trying to create circular prototype
+      //   A.prototype = b;
+      //   console.log(a);
+      //   try {
+      //     B.prototype = a;
+      //   } catch (error) {
+      //     console.log(error);
+      //   }
+
+      function Cat(name) {
+        this.name = name;
+      }
+
+      const fluffy = new Cat("Fluffy");
+      Cat.prototype = { age: 5 };
+      console.log(fluffy);
+      // search till the fluffy isntance not goes to the protoype obj
+      console.log(fluffy.hasOwnProperty("name")); // true
+      console.log(fluffy.hasOwnProperty("age")); //false
+      console.log(fluffy);
+    </script>
+  </body>
+</html>
