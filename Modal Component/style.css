@@ -1,0 +1,48 @@
+body {
+  background-color: #fafafc;
+  font-family: Arial, sans-serif;
+}
+
+#newTask {
+  padding: 0.75rem 1.5rem;
+  background-color: cadetblue;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  margin: 5rem;
+  cursor: pointer;
+}
+
+#newTask:hover {
+  background-color: #4d8a8c;
+}
+
+#popup {
+  border: none;
+  border-radius: 12px;
+  width: 700px;
+  max-width: 90%;
+  padding: 1.5rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+#popup::backdrop {
+  background: rgba(0, 0, 0, 0.4);
+}
+
+.popup-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#close {
+  text-decoration: none;
+  cursor: pointer;
+  color: #0077cc;
+  font-size: 14px;
+}
+
+#close:hover {
+  color: darkred;
+}
