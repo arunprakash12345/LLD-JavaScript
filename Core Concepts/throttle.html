@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -14,7 +14,6 @@
         let timerOut = true;
         return function (...args) {
           if (!timerOut) return;
-
           timerOut = false;
           fn(...args);
           setTimeout(() => {
