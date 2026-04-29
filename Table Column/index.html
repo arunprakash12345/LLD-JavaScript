@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Table Column</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div class="table-column">
+      <h1>Column Table</h1>
+      <div class="input-container">
+        <label for="rows">Rows</label>
+        <input
+          type="range"
+          id="rowRange"
+          name="rows"
+          min="2"
+          max="10"
+          value="2"
+        />
+        <label for="cols">Columns</label>
+        <input
+          type="range"
+          id="colRange"
+          name="cols"
+          min="2"
+          max="10"
+          value="2"
+        />
+      </div>
+      <div class="table-container">
+        <table id="table"></table>
+      </div>
+    </div>
+    <script src="./main.js"></script>
+  </body>
+</html>
