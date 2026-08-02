@@ -33,7 +33,7 @@ console.log(Boolean("hello")); // true
 console.log(Boolean("false")); // true
 console.log(Boolean([])); // true
 console.log(Boolean({})); // true
-console.log(Boolean(function () {})); // true
+console.log(Boolean(function () { })); // true
 
 // Important case
 console.log(Boolean([])); // true
@@ -68,7 +68,7 @@ if ([]) {
 
 // ++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-//Type coercion means JavaScript automatically converts one type into another type when needed.
+// Type coercion means JavaScript automatically converts one type into another type when needed.
 // There are two types:
 
 // Implicit coercion (JavaScript does it automatically)
