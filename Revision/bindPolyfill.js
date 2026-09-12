@@ -20,3 +20,15 @@ const fn = greet.myBind(user, "Chennai");
 
 console.log(fn("India"));
 // Arun from Chennai, India
+
+
+
+Function.prototype.myBind = function (context, ...args) {
+  if (typeof this !== "function") return;
+
+  const fn = this;
+
+  return function (...newArgs) {
+    return fn.apply(context, [...args, ...newArgs]);
+  };
+};
